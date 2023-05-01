@@ -1,0 +1,1 @@
+function vendingMachine(coinSlot, selection)

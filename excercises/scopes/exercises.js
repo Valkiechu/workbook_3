@@ -20,10 +20,10 @@ function test2A() {
 test2A();
 //answer a = 5
 //function test2A() { ... } defines a function test2A.
-//if (1 == 1) { var a = 5; } declares a variable a with a value of 5 inside an if statement. 
-//Note that var is used here to declare the variable, which has a function scope rather than a block scope 
+//if (1 == 1) { var a = 5; } declares a variable a with a value of 5 inside an if statement.
+//Note that var is used here to declare the variable, which has a function scope rather than a block scope
 //(i.e. the variable is accessible from within the whole function).
-//console.log("a = " + a); logs "a = 5" to the console, as it is 
+//console.log("a = " + a); logs "a = 5" to the console, as it is
 //referencing the a variable inside the function scope.
 //Since the if statement is true, the variable a is assigned a value of 5 and then printed to the console,
 //as it's accessible from within the function scope.
@@ -40,12 +40,11 @@ console.log("a = " + a);
 //let a = 4; declares a variable a with a value of 4 in the global scope.
 //function test3() { ... } defines a function test3.
 //a = 3; changes the value of the global a variable to 3.
-//console.log("a = " + a); logs "a = 3" to the console, as it is referencing 
+//console.log("a = " + a); logs "a = 3" to the console, as it is referencing
 //the global a variable (which was changed to 3 in step 3).
 //test3(); calls the test3 function.
-//console.log("a = " + a); logs "a = 3" to the console, as it is referencing 
+//console.log("a = " + a); logs "a = 3" to the console, as it is referencing
 //the global a variable (which was changed to 3 inside the test3 function).
-
 
 let b = 4;
 function test4() {
@@ -59,12 +58,11 @@ console.log("b = " + b);
 //let b = 4; declares a variable b with a value of 4 in the global scope.
 //function test4() { ... } defines a function test4.
 //let b = 7; declares a new variable b with a value of 7 in the local scope of the test4 function.
-//console.log("b = " + b); logs "b = 7" to the console, as it is referencing 
+//console.log("b = " + b); logs "b = 7" to the console, as it is referencing
 //the b variable in the local scope of the test4 function.
 //test4(); calls the test4 function.
-//console.log("b = " + b); logs "b = 4" to the console, as it is referencing the b variable 
+//console.log("b = " + b); logs "b = 4" to the console, as it is referencing the b variable
 //in the global scope (which was not changed after the test4 function was called).
-
 
 let c = 4;
 function test5() {
@@ -83,16 +81,17 @@ console.log("c = " + c);
 // We start by setting c to 4.
 //Then we define a function called test5.
 //Inside test5, we change c to 7.
-//We define another function called again, 
+//We define another function called again,
 //where we create a new variable called c and set it to 8.
-//We print out the value of c, which is 8, because we're looking 
+//We print out the value of c, which is 8, because we're looking
 //at the c variable inside the again function.
-//We go back to the test5 function and print out the value of c again, 
+//We go back to the test5 function and print out the value of c again,
 //which is 7 now, because we changed it earlier.
 //We call the test5 function, which runs all the code inside it.
-//Finally, we print out the value of c one more time, 
+//Finally, we print out the value of c one more time,
 //which is still 7 because we didn't change it again
-
+// do to let the 8 goes 1st
+// run the information in { } 1st then run the codes outside
 
 let d = 4;
 function test6() {

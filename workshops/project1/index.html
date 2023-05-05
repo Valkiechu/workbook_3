@@ -48,22 +48,27 @@
     </main>
 
     <script>
-      window.onload function calculateCost(){
-          let extraPerDay = 0;
-          let dailyRental = document.getElementById("dailyRental").check;
-          if(dailyRental == true){
-              extraPerDay += 29.99;
-          }
-          let not25 = document.getElementById("not25").check;
-          if (not25 == true){
-              extraPerDay = += 29.99 * 1.1;
-          }
-          let Over25 = document.getElementById("over25").check;
-          if (Over25 == true){
-              extraPerDay += 29.99
-          }
-      document.getElementById("resultParagraph").innerText = "$" + extraPerDay.toFixed(2);
+      window.onload = function () {
+        const btn = document.getElementById("button");
+        btn.onclick = calculateCost;
+      };
 
+      function calculateCost() {
+        let extraPerDay = 0;
+        let dailyRental = document.getElementById("dailyRental").checked;
+        if (dailyRental == true) {
+          extraPerDay += 29.99;
+        }
+        let not25 = document.getElementById("not25").checked;
+        if (not25 == true) {
+          extraPerDay += 29.99 * 1.1;
+        }
+        let Over25 = document.getElementById("over25").checked;
+        if (Over25 == true) {
+          extraPerDay += 29.99;
+        }
+        document.getElementById("resultParagraph").innerText =
+          "$" + extraPerDay.toFixed(2);
       }
     </script>
   </body>

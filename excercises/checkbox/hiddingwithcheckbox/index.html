@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide my stuff </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+
+    <main class="container">
+        <input type="checkbox" name="toggleCheckbox" id="toggleCheckbox" onclick="hideOrShowDetails();">
+        <label for="showCheckBox"> Don't Click on This</label>
+        <hr>
+        <section id="detailSection" style="display: none;">
+        
+            <img src="image/2cfzcc.jpg" alt="">
+    
+
+        </section>
+        <input type="checkbox" name="toggleCheckbox1" id="toggleCheckbox1" onclick="hideOrShowDetails1();">
+        <label for="showCheckBox1"> Also Don't Click on This</label>
+        
+        <section id="detailSection1" style="display: none;">
+            <img src="image/may-the-4th-willie-wonka.jpg" alt="">
+
+        </section>
+
+    </main>
+    <script>
+        function hideOrShowDetails(){
+            const detailSection = document.getElementById("detailSection");
+            const toggleCheckbox = document.getElementById("toggleCheckbox");
+            if (toggleCheckbox.checked) {
+                detailSection.style.display ="block";
+            } else{
+                detailSection.style.display = "none";
+            }
+
+        }
+        function hideOrShowDetails1(){
+            const detailSection1 = document.getElementById("detailSection1");
+            const toggleCheckbox1 = document.getElementById("toggleCheckbox1");
+            if (toggleCheckbox1.checked) {
+                detailSection1.style.display ="block";
+            } else{
+                detailSection1.style.display = "none";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

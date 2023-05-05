@@ -14,30 +14,18 @@
         <input type="date" id="pickUpDate" />
         <br />
         <label for="">Number Of Days</label>
-        <input
-          type=""
-          id="numberOfDays"
-          name="numberOfDays"
-          value="numberOfDays"
-        />
+        <input type="" id="number" name="number" value="number" />
       </fieldset>
 
-      <h2>Options</h2>
       <fieldset>
-        <legend>Rental Car Options:</legend>
-        <input
-          type="checkbox"
-          id="dailyRental"
-          name="dailyRental"
-          value="dailyRental"
-        />
+        <legend>Rental Car Rate:</legend>
         <label for="rate">Daily Rate of $29.99</label>
       </fieldset>
 
       <h2>Under 25?</h2>
       <input type="checkbox" id="not25" name="not25" />
       <label for="no">No</label>
-      <input type="checkbox" id="Over25" name="Over25" />
+      <input type="checkbox" id="over25" name="over25" />
       <label for="yes">Yes</label>
       <br />
       <button id="button" onclick="calculateCost();">
@@ -52,23 +40,20 @@
         const btn = document.getElementById("button");
         btn.onclick = calculateCost;
       };
-
       function calculateCost() {
-        let extraPerDay = 0;
-        let dailyRental = document.getElementById("dailyRental").checked;
-        if (dailyRental == true) {
-          extraPerDay += 29.99;
-        }
+        let payPerDay = 29.99;
+        let numberOfDays = number.value;
+
         let not25 = document.getElementById("not25").checked;
         if (not25 == true) {
-          extraPerDay += 29.99 * 1.1;
+          payPerDay += 29.99 * 1.1 * numberOfDays;
         }
-        let Over25 = document.getElementById("over25").checked;
-        if (Over25 == true) {
-          extraPerDay += 29.99;
+        let over25 = document.getElementById("over25").checked;
+        if (over25 == true) {
+          payPerDay += 29.99 * numberOfDays;
         }
         document.getElementById("resultParagraph").innerText =
-          "$" + extraPerDay.toFixed(2);
+          "$" + payPerDay.toFixed(2);
       }
     </script>
   </body>
